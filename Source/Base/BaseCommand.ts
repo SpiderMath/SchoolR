@@ -5,12 +5,14 @@ interface CommandConfig {
 	name: string,
 	aliases?: string[],
 	description: string,
+	category: string,
 }
 
 export default abstract class BaseCommand {
 	public name: string;
 	public description: string;
 	public aliases: string[];
+	public category: string;
 
 	public client: PhotoGenieClient;
 
@@ -18,6 +20,7 @@ export default abstract class BaseCommand {
 		this.name = config.name,
 		this.description = config.description,
 		this.aliases = config.aliases || [],
+		this.category = config.category;
 
 		this.client = client;
 

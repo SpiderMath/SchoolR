@@ -10,6 +10,7 @@ export default class PingCommand extends BaseCommand {
 			aliases: [
 				"latency",
 			],
+			category: "Bot",
 		});
 	}
 
