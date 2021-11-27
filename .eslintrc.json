@@ -1,13 +1,19 @@
 {
-	"extends": "eslint:recommended",
-	"env": {
-		"node": true,
-		"es6": true
-	},
+	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
-		"ecmaVersion": 2019
+		"ecmaVersion": 2021,
+		"sourceType": "module"
 	},
 	"rules": {
+		"no-unused-vars": "error",
+		"quotes": [
+			"error",
+			"double"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
 		"brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
 		"comma-dangle": ["error", "always-multiline"],
 		"comma-spacing": "error",
@@ -30,8 +36,6 @@
 		"no-var": "error",
 		"object-curly-spacing": ["error", "always"],
 		"prefer-const": "error",
-		"quotes": ["error", "double"],
-		"semi": ["error", "always"],
 		"space-before-blocks": "error",
 		"space-before-function-paren": ["error", {
 			"anonymous": "never",
